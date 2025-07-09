@@ -6,7 +6,9 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+body{
+    overflow-x: hidden;
+}
 a {
     text-decoration: none !important;
 }
@@ -699,7 +701,6 @@ footer .social-icons li a:hover {
     bottom: 10px;
     right: 15px;
 }
-
 .btn-call {
     position: fixed;
     bottom: 10px;

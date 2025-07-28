@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css">
+    <style>
+        .custom-btn {
+            background: linear-gradient(135deg, #ff5722, #ff9800);
+             /* background: linear-gradient(135deg, #048CE2, #01D8F6); */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 30px;
+            font-weight: 600;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s, box-shadow 0.2s;
+            text-transform: uppercase;
+        }
+
+        .custom-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+            text-decoration: none;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header" style=" background: linear-gradient(135deg, #ff5722, #ff9800);">
+                <!-- <div class="modal-header" style=" background: linear-gradient(135deg, #048CE2, #01D8F6);"> -->
+                    <h1 class="modal-title fs-5 mx-auto text-white fw-bold" id="staticBackdropLabel">Choose Mode of Traning</h1>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <a href="https://cncwebworld.com/liveclasses/">
+                                    <img src="./assets/img/popup_online.jpeg" class="img-fluid" alt="online_img">
+                                </a>
+                                <div class="text-center py-4">
+                                    <a href="https://cncwebworld.com/liveclasses/"
+                                        class="btn custom-btn">Online Training</a>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <a href="https://cncwebworld.com/mumbai/IT-courses-in-navi-mumbai.php">
+                                    <img src="./assets/img/popup_offline.jpeg" alt="offline_img" class="img-fluid">
+                                </a>
+                                <div class="text-center py-4">
+                                    <a href="https://cncwebworld.com/mumbai/IT-courses-in-navi-mumbai.php"
+                                        class="btn custom-btn">Offline Training</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            var myModal = new bootstrap.Modal(document.getElementById('staticBackdrop'));
+            myModal.show();
+        });
+    </script>
+</body>
+
+</html>

@@ -136,6 +136,10 @@
                     <a href="tel:+919175371081" class="btn" id="telbtn">+91-9175371081</a>
                     <a href="https://community.cncwebworld.com" class="btn" id="telbtn">Log In</a>
                 </ul>
+                 <div class="text-center mb-4 pt-4 px-3 ">
+                        <button class="btn btn-success " data-bs-toggle="modal" data-bs-target="#exampleModal">Apply Now
+                        </button>
+                    </div>
             </div>
         </div>
         <div class="offcanvas offcanvas-end" tabindex="-1" id="courseOffcanvas" aria-labelledby="courseOffcanvas">
@@ -615,61 +619,32 @@
     <a href="tel:+919175371081" class="btn-call">
         <i class="fa-solid fa-phone"></i> </a>
     <!-- fixed section end -->
+      <!-- popup section start -->
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Enquiry Form</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe src="https://app.topfunnel.in/widget/form/670abab6b7753"
+                        style="width:100%;height:600px;border:none;border-radius:3px" id="inline-670abab6b7753"
+                        data-form-name="Email Data Analytics" data-layout-iframe-id="inline-670abab6b7753"
+                        data-form-id="670abab6b7753" data-height="600" title="Email Data Analytics">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- popup section end -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js"></script>
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script src="./assets/js/commonscript.js"></script>
-    <script>
-        const galleryItems = document.querySelector('.gallery-items').children;
-        const prev = document.querySelector('.prev');
-        const next = document.querySelector('.next');
-        const pageNo = document.querySelector('.page-no');
-        let maxItem = 6;
-        let index = 1;
-        let pagination = galleryItems.length / maxItem
-
-        prev.addEventListener('click', () => {
-            index--;
-            disabled()
-            showItems()
-        })
-        next.addEventListener('click', () => {
-            index++;
-            disabled()
-            showItems()
-        })
-        function disabled() {
-            if (index == 1) {
-                prev.classList.add('disabled')
-            }
-            else {
-                prev.classList.remove('disabled')
-            }
-            if (index == 9) {
-                next.classList.add('disabled')
-            }
-            else {
-                next.classList.remove('disabled')
-            }
-        }
-        function showItems() {
-            for (let i = 0; i < galleryItems.length; i++) {
-                galleryItems[i].classList.add('hide');
-                galleryItems[i].classList.remove('show');
-                if (i >= (index * maxItem) - maxItem && i < index * maxItem) {
-                    galleryItems[i].classList.add('show');
-                    galleryItems[i].classList.remove('hide');
-
-                }
-                pageNo.innerHTML = index;
-            }
-        }
-        window.onload = () => {
-            showItems();
-            disabled()
-        }
-    </script>
+    
 </body>
 
 </html>
